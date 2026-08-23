@@ -1,0 +1,278 @@
+/* =========================================================
+   VOC BIOMETRIC AUTHENTICATION
+   CASE STUDY
+========================================================= */
+
+:root {
+    --voc-bg: #080808;
+    --voc-surface: #101010;
+    --voc-text: #f4f4f2;
+    --voc-soft: #9a9a9a;
+    --voc-dim: #5f5f5f;
+    --voc-line: #202020;
+    --voc-accent: #c7ff2f;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+body {
+    background: var(--voc-bg);
+    color: var(--voc-text);
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            var(--voc-line) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--voc-line) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+    opacity: 0.28;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-detail-hero {
+    position: relative;
+
+    min-height: 88vh;
+
+    padding:
+        160px
+        max(10vw, 80px)
+        100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-bottom: 1px solid var(--voc-line);
+
+    z-index: 1;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 65px;
+
+    color: var(--voc-dim);
+
+    font-family: var(--mono);
+    font-size: 11px;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.section-label span {
+    color: var(--voc-accent);
+}
+
+
+.project-detail-hero h1 {
+    max-width: 1200px;
+
+    margin: 0;
+
+    font-size: clamp(
+        70px,
+        10vw,
+        155px
+    );
+
+    line-height: 0.86;
+
+    letter-spacing: -0.085em;
+
+    font-weight: 600;
+}
+
+.project-detail-hero h1 span {
+    display: block;
+    color: var(--voc-accent);
+}
+
+.project-detail-hero > p {
+    max-width: 760px;
+
+    margin-top: 55px;
+
+    color: var(--voc-soft);
+
+    font-size: clamp(
+        18px,
+        2vw,
+        25px
+    );
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.project-detail-content {
+    position: relative;
+    z-index: 1;
+
+    width: min(
+        1200px,
+        calc(100% - 160px)
+    );
+
+    margin: 0 auto;
+
+    padding: 120px 0;
+}
+
+.detail-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    min-height: 300px;
+
+    border-top: 1px solid var(--voc-line);
+}
+
+.detail-block:last-child {
+    border-bottom: 1px solid var(--voc-line);
+}
+
+.detail-block h2 {
+    margin: 0;
+
+    padding: 40px 35px;
+
+    color: var(--voc-accent);
+
+    font-family: var(--mono);
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+}
+
+.detail-block p {
+    max-width: 800px;
+
+    margin: 0;
+
+    padding: 40px 35px;
+
+    color: var(--voc-soft);
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .project-detail-hero {
+        min-height: 80vh;
+
+        padding:
+            130px
+            40px
+            80px;
+    }
+
+    .project-detail-hero h1 {
+        font-size: clamp(
+            55px,
+            12vw,
+            100px
+        );
+    }
+
+    .project-detail-content {
+        width: calc(100% - 80px);
+    }
+
+    .detail-block {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-block h2 {
+        padding-bottom: 10px;
+    }
+
+    .detail-block p {
+        padding-top: 10px;
+        padding-bottom: 45px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .project-detail-hero {
+        min-height: 75vh;
+
+        padding:
+            120px
+            25px
+            70px;
+    }
+
+    .section-label {
+        margin-bottom: 40px;
+
+        font-size: 9px;
+    }
+
+    .project-detail-hero h1 {
+        font-size: 17vw;
+        line-height: 0.9;
+    }
+
+    .project-detail-hero > p {
+        margin-top: 35px;
+
+        font-size: 16px;
+    }
+
+    .project-detail-content {
+        width: calc(100% - 50px);
+
+        padding: 80px 0;
+    }
+
+    .detail-block h2,
+    .detail-block p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}

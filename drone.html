@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>S NISHAANTH | GPS-Denied Autonomous Drone</title>
+
+    <meta
+        name="description"
+        content="GPS-denied autonomous drone development and navigation project by S NISHAANTH."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drone.css">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+        SN<span>.</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="lab.html">Lab</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section class="drone-hero">
+
+    <div class="section-label">
+        <span>02</span>
+        UAV / EMBEDDED / AUTONOMY
+    </div>
+
+    <div class="drone-hero-content">
+
+        <h1>
+            GPS-DENIED
+            <span>AUTONOMOUS</span>
+            DRONE
+        </h1>
+
+        <p>
+            Building and integrating a UAV platform for autonomous
+            navigation without relying on conventional GPS guidance.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT OVERVIEW ================= -->
+
+<section class="drone-overview">
+
+    <div class="section-label">
+        <span>01</span>
+        PROJECT OVERVIEW
+    </div>
+
+    <div class="drone-overview-grid">
+
+        <div>
+            <h2>
+                NAVIGATION
+                <span>WITHOUT GPS.</span>
+            </h2>
+        </div>
+
+        <div>
+            <p>
+                This project explores autonomous UAV navigation in
+                environments where conventional GPS-based positioning
+                cannot be relied upon.
+            </p>
+
+            <p>
+                The system combines onboard sensing, embedded
+                computing and robotic software to build a platform
+                capable of perceiving its surroundings and supporting
+                autonomous navigation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CHALLENGE ================= -->
+
+<section class="drone-section">
+
+    <div class="section-label">
+        <span>02</span>
+        THE CHALLENGE
+    </div>
+
+    <div class="drone-two-column">
+
+        <h2>
+            GPS IS
+            <span>NOT ALWAYS</span>
+            AN OPTION.
+        </h2>
+
+        <div>
+
+            <p>
+                Autonomous aerial navigation becomes significantly
+                harder when GPS is unavailable, unreliable or
+                intentionally denied.
+            </p>
+
+            <p>
+                The vehicle still needs information about its
+                surroundings and motion in order to make meaningful
+                navigation decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SYSTEM ================= -->
+
+<section class="drone-section">
+
+    <div class="section-label">
+        <span>03</span>
+        SYSTEM ARCHITECTURE
+    </div>
+
+    <div class="architecture">
+
+        <div class="architecture-row">
+
+            <div class="architecture-box">
+                <span>01</span>
+                <strong>SENSING</strong>
+                <p>
+                    Cameras and onboard sensors provide
+                    environmental and motion information.
+                </p>
+            </div>
+
+            <div class="architecture-arrow">→</div>
+
+            <div class="architecture-box">
+                <span>02</span>
+                <strong>COMPUTE</strong>
+                <p>
+                    Onboard computing processes sensor
+                    information for robotic perception.
+                </p>
+            </div>
+
+            <div class="architecture-arrow">→</div>
+
+            <div class="architecture-box">
+                <span>03</span>
+                <strong>NAVIGATION</strong>
+                <p>
+                    Processed information contributes to
+                    autonomous navigation decisions.
+                </p>
+            </div>
+
+            <div class="architecture-arrow">→</div>
+
+            <div class="architecture-box">
+                <span>04</span>
+                <strong>FLIGHT CONTROL</strong>
+                <p>
+                    Navigation outputs are integrated with
+                    the UAV flight-control system.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HARDWARE ================= -->
+
+<section class="drone-section">
+
+    <div class="section-label">
+        <span>04</span>
+        HARDWARE
+    </div>
+
+    <div class="hardware-grid">
+
+        <div class="hardware-item">
+            <span>01</span>
+            <h3>UAV PLATFORM</h3>
+            <p>
+                Airframe and flight hardware forming the
+                physical autonomous platform.
+            </p>
+        </div>
+
+        <div class="hardware-item">
+            <span>02</span>
+            <h3>FLIGHT CONTROL</h3>
+            <p>
+                Flight-control hardware responsible for
+                stabilisation and vehicle control.
+            </p>
+        </div>
+
+        <div class="hardware-item">
+            <span>03</span>
+            <h3>RASPBERRY PI 5</h3>
+            <p>
+                Onboard computing platform used for
+                higher-level robotic processing.
+            </p>
+        </div>
+
+        <div class="hardware-item">
+            <span>04</span>
+            <h3>INTEL REALSENSE D435</h3>
+            <p>
+                Depth camera used as part of the onboard
+                perception system.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOFTWARE ================= -->
+
+<section class="drone-section">
+
+    <div class="section-label">
+        <span>05</span>
+        SOFTWARE / AUTONOMY
+    </div>
+
+    <div class="drone-two-column">
+
+        <h2>
+            MAKING THE
+            <span>HARDWARE</span>
+            THINK.
+        </h2>
+
+        <div>
+
+            <p>
+                The onboard computing layer is used to process
+                sensor information and connect perception with
+                autonomous robotic behaviour.
+            </p>
+
+            <div class="tech-list">
+
+                <div>
+                    <span>01</span>
+                    ROS 2
+                </div>
+
+                <div>
+                    <span>02</span>
+                    COMPUTER VISION
+                </div>
+
+                <div>
+                    <span>03</span>
+                    SENSOR INTEGRATION
+                </div>
+
+                <div>
+                    <span>04</span>
+                    AUTONOMOUS NAVIGATION
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MY ROLE ================= -->
+
+<section class="drone-section">
+
+    <div class="section-label">
+        <span>06</span>
+        MY ROLE
+    </div>
+
+    <div class="role-layout">
+
+        <h2>
+            I WORKED
+            <span>WHERE HARDWARE</span>
+            MEETS AUTONOMY.
+        </h2>
+
+        <div>
+
+            <p>
+                My work focused primarily on the hardware side of
+                the autonomous UAV and its integration with the
+                onboard computing and sensing systems.
+            </p>
+
+            <div class="role-list">
+
+                <div>
+                    <span>01</span>
+                    Hardware design and integration
+                </div>
+
+                <div>
+                    <span>02</span>
+                    Sensor integration
+                </div>
+
+                <div>
+                    <span>03</span>
+                    UAV system integration
+                </div>
+
+                <div>
+                    <span>04</span>
+                    Testing and debugging
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ENGINEERING CHALLENGES ================= -->
+
+<section class="drone-section">
+
+    <div class="section-label">
+        <span>07</span>
+        ENGINEERING CHALLENGES
+    </div>
+
+    <div class="challenge-grid">
+
+        <div>
+            <span>01</span>
+            <h3>GPS-DENIED NAVIGATION</h3>
+            <p>
+                Designing a system that can operate without
+                depending entirely on conventional GPS positioning.
+            </p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <h3>SENSOR INTEGRATION</h3>
+            <p>
+                Bringing multiple sensing systems together while
+                maintaining reliable data flow.
+            </p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <h3>REAL-TIME COMPUTING</h3>
+            <p>
+                Processing perception and navigation information
+                within the constraints of an airborne platform.
+            </p>
+        </div>
+
+        <div>
+            <span>04</span>
+            <h3>SYSTEM TESTING</h3>
+            <p>
+                Hardware and software integration required
+                repeated testing, debugging and iteration.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT STORY ================= -->
+
+<section class="drone-story">
+
+    <!-- INTRO -->
+
+    <div class="drone-story-intro">
+
+        <h2>
+            FROM AIRFRAME
+            <span>TO AUTONOMY.</span>
+        </h2>
+
+        <p>
+            The project moved from individual hardware components
+            into complete UAV platforms designed for autonomous
+            navigation in GPS-denied environments.
+        </p>
+
+    </div>
+
+
+    <!-- 01 / PLATFORM -->
+
+    <div class="drone-story-block">
+
+        <div class="drone-story-image">
+
+            <img
+                src="assets/drone-assets/drone-build.jpg"
+                alt="GPS-denied autonomous drone platform"
+            >
+
+        </div>
+
+        <div class="drone-story-copy">
+
+            <div class="drone-story-label">
+                01 / PLATFORM DEVELOPMENT
+            </div>
+
+            <h3>
+                BUILDING THE
+                <span>AIRFRAME.</span>
+            </h3>
+
+            <p>
+                The project involved assembling and integrating
+                UAV platforms around the requirements of autonomous
+                navigation.
+            </p>
+
+            <p>
+                I worked directly with the physical airframe,
+                motors, ESCs, flight controller, power system,
+                onboard computing and sensing hardware.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 02 / FIELD TESTING -->
+
+    <div class="drone-story-block reverse">
+
+        <div class="drone-story-image">
+
+            <img
+                src="assets/drone-assets/drone-field.jpg"
+                alt="Drone during outdoor field testing"
+            >
+
+        </div>
+
+        <div class="drone-story-copy">
+
+            <div class="drone-story-label">
+                02 / FIELD TESTING
+            </div>
+
+            <h3>
+                TESTING
+                <span>THE SYSTEM.</span>
+            </h3>
+
+            <p>
+                Hardware was taken beyond the workbench and tested
+                in real outdoor environments.
+            </p>
+
+            <p>
+                Field testing helped expose practical issues around
+                stability, power delivery, wiring, thrust and system
+                integration that were difficult to identify during
+                bench testing alone.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 03 / TEAM BUILD -->
+
+    <div class="drone-story-block">
+
+        <div class="drone-story-image">
+
+            <img
+                src="assets/drone-assets/team-build.jpg"
+                alt="Team assembling the autonomous drone"
+            >
+
+        </div>
+
+        <div class="drone-story-copy">
+
+            <div class="drone-story-label">
+                03 / ENGINEERING
+            </div>
+
+            <h3>
+                BUILDING
+                <span>UNDER PRESSURE.</span>
+            </h3>
+
+            <p>
+                A large part of the work happened away from the
+                final demonstration — assembling, debugging,
+                rewiring and repeatedly testing the platform.
+            </p>
+
+            <p>
+                My contribution focused primarily on UAV assembly,
+                hardware integration, debugging and system-level
+                engineering.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 04 / COMPETITION -->
+
+    <div class="drone-story-block reverse">
+
+        <div class="drone-story-image document">
+
+            <img
+                src="assets/drone-assets/iroc-document.jpg"
+                alt="IROC-U 2025 registration document"
+            >
+
+        </div>
+
+        <div class="drone-story-copy">
+
+            <div class="drone-story-label">
+                04 / COMPETITION
+            </div>
+
+            <h3>
+                BUILT FOR
+                <span>IROC-U 2025.</span>
+            </h3>
+
+            <p>
+                The platform was developed as part of the ISRO
+                Robotics Challenge — URSC 2025.
+            </p>
+
+            <p>
+                The team progressed through the first stage of
+                the challenge, clearing Round 1 with the autonomous
+                UAV platform.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FINAL FIELD IMAGE -->
+
+    <div class="drone-story-wide">
+
+        <img
+            src="assets/drone-assets/team-field.jpg"
+            alt="Team during autonomous drone field testing"
+        >
+
+        <div class="drone-story-wide-caption">
+            FIELD OPERATIONS / TEAM TESTING
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= RESULT ================= -->
+
+<section class="drone-result">
+
+    <div class="section-label">
+        <span>08</span>
+        RESULT
+    </div>
+
+    <h2>
+        FROM A UAV
+        <span>TO AN AUTONOMOUS SYSTEM.</span>
+    </h2>
+
+    <p>
+        The project gave me hands-on experience integrating
+        aerial hardware, onboard perception and robotic software
+        into a single autonomous platform.
+    </p>
+
+</section>
+
+
+<!-- ================= TECH STACK ================= -->
+
+<section class="drone-tech">
+
+    <div class="section-label">
+        <span>09</span>
+        TECHNOLOGY
+    </div>
+
+    <div class="tech-stack">
+
+        <span>RASPBERRY PI 5</span>
+        <span>INTEL REALSENSE D435</span>
+        <span>ROS 2</span>
+        <span>UAV</span>
+        <span>EMBEDDED SYSTEMS</span>
+        <span>COMPUTER VISION</span>
+        <span>AUTONOMOUS NAVIGATION</span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEXT ================= -->
+
+<section class="next-project">
+
+    <div class="section-label">
+        <span>10</span>
+        CONTINUE EXPLORING
+    </div>
+
+    <a href="projects.html">
+
+        <h2>
+            BACK TO
+            <span>PROJECTS →</span>
+        </h2>
+
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <span>S NISHAANTH</span>
+
+    <span>
+        ROBOTICS · DRONES · EMBEDDED SYSTEMS
+    </span>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

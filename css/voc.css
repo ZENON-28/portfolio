@@ -1,16 +1,14 @@
 /* =========================================================
-   VOC BIOMETRIC AUTHENTICATION
-   CASE STUDY
+   VOC BIOMETRIC AUTHENTICATION — CASE STUDY
 ========================================================= */
 
 :root {
     --voc-bg: #080808;
-    --voc-surface: #101010;
-    --voc-text: #f4f4f2;
-    --voc-soft: #9a9a9a;
-    --voc-dim: #5f5f5f;
-    --voc-line: #202020;
-    --voc-accent: #c7ff2f;
+    --voc-text: #f2f2f0;
+    --voc-muted: #8f8f8a;
+    --voc-dim: #555550;
+    --voc-line: #242424;
+    --voc-accent: #c6ff2e;
 }
 
 
@@ -24,30 +22,18 @@ body {
 }
 
 main {
-    position: relative;
-    overflow: hidden;
-}
-
-main::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
     background-image:
         linear-gradient(
-            var(--voc-line) 1px,
+            rgba(255, 255, 255, 0.025) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            var(--voc-line) 1px,
+            rgba(255, 255, 255, 0.025) 1px,
             transparent 1px
         );
 
-    background-size: 80px 80px;
-    opacity: 0.28;
-
-    pointer-events: none;
+    background-size: 86px 86px;
 }
 
 
@@ -55,23 +41,23 @@ main::before {
    HERO
 ========================================================= */
 
-.project-detail-hero {
-    position: relative;
-
-    min-height: 88vh;
+.voc-hero {
+    min-height: calc(100vh - 80px);
 
     padding:
-        160px
-        max(10vw, 80px)
-        100px;
+        110px
+        clamp(40px, 10vw, 170px)
+        120px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 
     border-bottom: 1px solid var(--voc-line);
+}
 
-    z-index: 1;
+.voc-hero .section-label {
+    margin-bottom: 80px;
 }
 
 .section-label {
@@ -79,117 +65,645 @@ main::before {
     align-items: center;
     gap: 18px;
 
-    margin-bottom: 65px;
+    margin-bottom: 80px;
 
     color: var(--voc-dim);
 
-    font-family: var(--mono);
-    font-size: 11px;
+    font-family:
+        "Courier New",
+        monospace;
 
-    letter-spacing: 0.14em;
+    font-size: 12px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 
 .section-label span {
     color: var(--voc-accent);
+    font-weight: 700;
 }
 
-
-.project-detail-hero h1 {
-    max-width: 1200px;
+.voc-hero h1 {
+    max-width: 1500px;
 
     margin: 0;
 
-    font-size: clamp(
-        70px,
-        10vw,
-        155px
-    );
+    font-size: clamp(72px, 10vw, 175px);
+    line-height: 0.84;
 
-    line-height: 0.86;
+    letter-spacing: -0.065em;
 
-    letter-spacing: -0.085em;
+    font-weight: 800;
 
-    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.project-detail-hero h1 span {
+.voc-hero h1 span {
     display: block;
     color: var(--voc-accent);
 }
 
-.project-detail-hero > p {
-    max-width: 760px;
+.voc-hero p {
+    max-width: 780px;
+
+    margin-top: 65px;
+
+    color: var(--voc-muted);
+
+    font-size: clamp(18px, 1.6vw, 25px);
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   SHARED SECTIONS
+========================================================= */
+
+.voc-section,
+.voc-result,
+.voc-tech,
+.voc-media,
+.voc-next {
+
+    padding:
+        130px
+        clamp(40px, 10vw, 170px);
+
+    border-bottom: 1px solid var(--voc-line);
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.voc-two-column {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+
+    align-items: start;
+}
+
+.voc-two-column h2,
+.voc-idea h2,
+.voc-role h2 {
+
+    margin: 0;
+
+    font-size: clamp(52px, 6vw, 105px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.055em;
+
+    text-transform: uppercase;
+}
+
+.voc-two-column h2 span,
+.voc-idea h2 span,
+.voc-role h2 span {
+
+    display: block;
+
+    color: var(--voc-accent);
+}
+
+.voc-two-column > div {
+    max-width: 680px;
+}
+
+.voc-two-column p,
+.voc-idea p,
+.voc-role p {
+
+    margin: 0 0 35px;
+
+    color: var(--voc-muted);
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   IDEA
+========================================================= */
+
+.voc-idea {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+
+    align-items: end;
+}
+
+.voc-idea p {
+    max-width: 650px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   SYSTEM FLOW
+========================================================= */
+
+.voc-flow {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        45px
+        1fr
+        45px
+        1fr
+        45px
+        1fr;
+
+    border-top: 1px solid var(--voc-line);
+    border-bottom: 1px solid var(--voc-line);
+}
+
+.voc-flow-item {
+    min-height: 270px;
+
+    padding: 35px;
+
+    border-left: 1px solid var(--voc-line);
+}
+
+.voc-flow-item:last-child {
+    border-right: 1px solid var(--voc-line);
+}
+
+.voc-flow-item span,
+.voc-hardware-item > span,
+.voc-challenge-grid > div > span,
+.voc-role-list span,
+.voc-model-list span {
+
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: var(--voc-accent);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+}
+
+.voc-flow-item strong {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 21px;
+
+    letter-spacing: -0.02em;
+}
+
+.voc-flow-item p {
+
+    margin: 0;
+
+    color: var(--voc-muted);
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+.voc-flow-arrow {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--voc-accent);
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   HARDWARE
+========================================================= */
+
+.voc-hardware-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--voc-line);
+    border-left: 1px solid var(--voc-line);
+}
+
+.voc-hardware-item {
+
+    min-height: 300px;
+
+    padding: 45px;
+
+    border-right: 1px solid var(--voc-line);
+    border-bottom: 1px solid var(--voc-line);
+}
+
+.voc-hardware-item h3 {
+
+    margin: 0 0 25px;
+
+    font-size: clamp(25px, 2.2vw, 38px);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+.voc-hardware-item p {
+
+    max-width: 500px;
+
+    margin: 0;
+
+    color: var(--voc-muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ML MODELS
+========================================================= */
+
+.voc-model-list {
 
     margin-top: 55px;
 
-    color: var(--voc-soft);
+    border-top: 1px solid var(--voc-line);
+}
 
-    font-size: clamp(
-        18px,
-        2vw,
-        25px
-    );
+.voc-model-list div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid var(--voc-line);
+
+    font-size: 17px;
+}
+
+.voc-model-list span {
+
+    width: 35px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.voc-challenge-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--voc-line);
+    border-left: 1px solid var(--voc-line);
+}
+
+.voc-challenge-grid > div {
+
+    min-height: 300px;
+
+    padding: 45px;
+
+    border-right: 1px solid var(--voc-line);
+    border-bottom: 1px solid var(--voc-line);
+}
+
+.voc-challenge-grid > div > span {
+
+    margin-bottom: 50px;
+}
+
+.voc-challenge-grid h3 {
+
+    margin: 0 0 25px;
+
+    font-size: clamp(25px, 2.2vw, 38px);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+.voc-challenge-grid p {
+
+    max-width: 500px;
+
+    margin: 0;
+
+    color: var(--voc-muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.voc-role {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+}
+
+.voc-role > div {
+    max-width: 680px;
+}
+
+.voc-role-list {
+
+    margin-top: 55px;
+
+    border-top: 1px solid var(--voc-line);
+}
+
+.voc-role-list div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--voc-line);
+
+    font-size: 17px;
+}
+
+.voc-role-list span {
+
+    width: 30px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.voc-result {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.voc-result h2 {
+
+    max-width: 1350px;
+
+    margin: 0;
+
+    font-size: clamp(60px, 8vw, 140px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+
+    text-transform: uppercase;
+}
+
+.voc-result h2 span {
+
+    display: block;
+
+    color: var(--voc-accent);
+}
+
+.voc-result p {
+
+    max-width: 700px;
+
+    margin-top: 60px;
+
+    color: var(--voc-muted);
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TECHNOLOGY
+========================================================= */
+
+.voc-tech-stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.voc-tech-stack span {
+
+    padding: 16px 20px;
+
+    border: 1px solid var(--voc-line);
+
+    color: var(--voc-muted);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.voc-tech-stack span:hover {
+
+    border-color: var(--voc-accent);
+
+    color: var(--voc-accent);
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.voc-media-placeholder {
+
+    min-height: 420px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    border: 1px solid var(--voc-line);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.015),
+            transparent
+        );
+}
+
+.voc-media-placeholder span {
+
+    color: var(--voc-accent);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+}
+
+.voc-media-placeholder p {
+
+    max-width: 500px;
+
+    margin-top: 20px;
+
+    color: var(--voc-muted);
+
+    font-size: 15px;
 
     line-height: 1.6;
 }
 
 
 /* =========================================================
-   CONTENT
+   NEXT PROJECT
 ========================================================= */
 
-.project-detail-content {
-    position: relative;
-    z-index: 1;
+.voc-next {
 
-    width: min(
-        1200px,
-        calc(100% - 160px)
-    );
+    min-height: 65vh;
 
-    margin: 0 auto;
+    display: flex;
 
-    padding: 120px 0;
+    flex-direction: column;
+
+    justify-content: center;
 }
 
-.detail-block {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.voc-next a {
 
-    min-height: 300px;
+    color: inherit;
 
-    border-top: 1px solid var(--voc-line);
+    text-decoration: none;
 }
 
-.detail-block:last-child {
-    border-bottom: 1px solid var(--voc-line);
-}
+.voc-next h2 {
 
-.detail-block h2 {
     margin: 0;
 
-    padding: 40px 35px;
+    font-size: clamp(65px, 9vw, 150px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.065em;
+
+    text-transform: uppercase;
+
+    transition: transform 0.3s ease;
+}
+
+.voc-next h2 span {
+
+    display: block;
 
     color: var(--voc-accent);
+}
 
-    font-family: var(--mono);
+.voc-next a:hover h2 {
+
+    transform: translateX(15px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        35px
+        clamp(40px, 5vw, 80px);
+
+    border-top: 1px solid var(--voc-line);
+
+    color: var(--voc-dim);
+
+    font-family:
+        "Courier New",
+        monospace;
+
     font-size: 11px;
 
     letter-spacing: 0.12em;
-}
-
-.detail-block p {
-    max-width: 800px;
-
-    margin: 0;
-
-    padding: 40px 35px;
-
-    color: var(--voc-soft);
-
-    font-size: 18px;
-    line-height: 1.8;
 }
 
 
@@ -197,82 +711,135 @@ main::before {
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
-    .project-detail-hero {
-        min-height: 80vh;
+    .voc-hero {
 
-        padding:
-            130px
-            40px
-            80px;
+        min-height: auto;
+
+        padding-top: 90px;
+        padding-bottom: 100px;
     }
 
-    .project-detail-hero h1 {
-        font-size: clamp(
-            55px,
-            12vw,
-            100px
-        );
+    .voc-two-column,
+    .voc-idea,
+    .voc-role {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
     }
 
-    .project-detail-content {
-        width: calc(100% - 80px);
-    }
+    .voc-flow {
 
-    .detail-block {
         grid-template-columns: 1fr;
     }
 
-    .detail-block h2 {
-        padding-bottom: 10px;
+    .voc-flow-arrow {
+
+        min-height: 50px;
     }
 
-    .detail-block p {
-        padding-top: 10px;
-        padding-bottom: 45px;
+    .voc-flow-item {
+
+        border-right: 1px solid var(--voc-line);
+    }
+
+    .voc-hardware-grid,
+    .voc-challenge-grid {
+
+        grid-template-columns: 1fr;
     }
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .project-detail-hero {
-        min-height: 75vh;
+    main {
 
-        padding:
-            120px
-            25px
-            70px;
+        background-size: 55px 55px;
+    }
+
+    .voc-hero,
+    .voc-section,
+    .voc-result,
+    .voc-tech,
+    .voc-media,
+    .voc-next {
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .voc-hero {
+
+        padding-top: 70px;
+        padding-bottom: 80px;
     }
 
     .section-label {
-        margin-bottom: 40px;
 
-        font-size: 9px;
+        margin-bottom: 55px;
     }
 
-    .project-detail-hero h1 {
-        font-size: 17vw;
-        line-height: 0.9;
+    .voc-hero h1 {
+
+        font-size: clamp(58px, 16vw, 100px);
     }
 
-    .project-detail-hero > p {
-        margin-top: 35px;
+    .voc-hero p {
+
+        margin-top: 45px;
+
+        font-size: 17px;
+    }
+
+    .voc-two-column h2,
+    .voc-idea h2,
+    .voc-role h2 {
+
+        font-size: clamp(50px, 14vw, 85px);
+    }
+
+    .voc-two-column p,
+    .voc-idea p,
+    .voc-role p {
 
         font-size: 16px;
     }
 
-    .project-detail-content {
-        width: calc(100% - 50px);
+    .voc-flow-item,
+    .voc-hardware-item,
+    .voc-challenge-grid > div {
 
-        padding: 80px 0;
+        min-height: auto;
+
+        padding: 30px;
     }
 
-    .detail-block h2,
-    .detail-block p {
-        padding-left: 20px;
-        padding-right: 20px;
+    .voc-result {
+
+        min-height: 70vh;
     }
 
+    .voc-result h2 {
+
+        font-size: clamp(55px, 14vw, 95px);
+    }
+
+    .voc-media-placeholder {
+
+        min-height: 300px;
+    }
+
+    footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        padding: 30px 25px;
+    }
 }

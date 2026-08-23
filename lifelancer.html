@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeLancer Rover | S NISHAANTH</title>
+
+    <meta
+        name="description"
+        content="LifeLancer — a multi-terrain disaster-response rover integrating ground mobility, perception and an aerial companion."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lifelancer.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+        SN<span>.</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="lab.html">Lab</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="life-hero">
+
+    <div class="section-label">
+        <span>01</span>
+        ROBOTICS / ROS2 / SURVEILLANCE
+    </div>
+
+    <h1>
+        LIFELANCER
+        <span>ROVER</span>
+    </h1>
+
+    <p>
+        A multi-terrain disaster-response rover designed to
+        extend its reach using an aerial companion.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="life-intro">
+
+    <div class="life-intro-heading">
+
+        <h2>
+            BUILT FOR
+            <span>THE GROUND.</span>
+        </h2>
+
+    </div>
+
+    <div class="life-intro-copy">
+
+        <p>
+            LifeLancer explores how a ground robot can operate in
+            environments where terrain, obstacles and human access
+            make conventional intervention difficult.
+        </p>
+
+        <p>
+            The concept combines a rocker-bogie rover with onboard
+            perception, environmental sensing and an aerial
+            companion to extend the operational reach of the system.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROBLEM
+========================================================= -->
+
+<section class="life-section">
+
+    <div class="life-section-label">
+        02 / THE PROBLEM
+    </div>
+
+    <div class="life-two-column">
+
+        <h2>
+            WHEN THE
+            <span>ROVER STOPS.</span>
+        </h2>
+
+        <div>
+
+            <p>
+                A rover can traverse difficult terrain, but every
+                ground platform eventually encounters an area that
+                it cannot physically enter.
+            </p>
+
+            <p>
+                LifeLancer approaches this limitation by pairing
+                ground mobility with an aerial companion, allowing
+                the system to extend its reach beyond the physical
+                limits of the rover.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SYSTEM
+========================================================= -->
+
+<section class="life-section life-system">
+
+    <div class="life-section-label">
+        03 / SYSTEM ARCHITECTURE
+    </div>
+
+    <div class="life-two-column">
+
+        <h2>
+            ONE SYSTEM.
+            <span>MULTIPLE LAYERS.</span>
+        </h2>
+
+        <div>
+
+            <p>
+                Raspberry Pi 5 acts as the central computing hub,
+                while ESP32-based electronics handle rover-level
+                communication and control.
+            </p>
+
+            <p>
+                The architecture allows perception, sensing,
+                communication and mobility subsystems to operate
+                together as a single robotic platform.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="life-architecture">
+
+        <div>
+            <span>01</span>
+            <strong>PERCEPTION</strong>
+            <p>Intel RealSense depth sensing and human detection.</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <strong>COMPUTE</strong>
+            <p>Raspberry Pi 5 running the higher-level robotic stack.</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <strong>CONTROL</strong>
+            <p>ESP32-based communication and rover-level control.</p>
+        </div>
+
+        <div>
+            <span>04</span>
+            <strong>COMMUNICATION</strong>
+            <p>Wireless communication with LoRa considered for longer-range operation.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     AI / PERCEPTION
+========================================================= -->
+
+<section class="life-story">
+
+    <div class="life-story-image">
+
+        <img
+            src="assets/lifelancer-assets/lifelancer-ai-perception-testing.png"
+            alt="LifeLancer AI perception and testing setup"
+        >
+
+    </div>
+
+    <div class="life-story-copy">
+
+        <div class="life-story-label">
+            04 / AI & PERCEPTION
+        </div>
+
+        <h2>
+            SEEING THE
+            <span>ENVIRONMENT.</span>
+        </h2>
+
+        <p>
+            The perception layer uses depth information and
+            onboard computing to understand the environment around
+            the rover.
+        </p>
+
+        <p>
+            Human detection and obstacle awareness form part of the
+            system's intended capabilities, allowing the rover to
+            move from simple remote control toward intelligent
+            operation.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ROVER BUILD
+========================================================= -->
+
+<section class="life-story reverse">
+
+    <div class="life-story-image">
+
+        <img
+            src="assets/lifelancer-assets/lifelancer-rover-prototype.png"
+            alt="LifeLancer rover prototype"
+        >
+
+    </div>
+
+    <div class="life-story-copy">
+
+        <div class="life-story-label">
+            05 / HARDWARE
+        </div>
+
+        <h2>
+            BUILDING THE
+            <span>ROVER.</span>
+        </h2>
+
+        <p>
+            The physical platform is built around a multi-terrain
+            rover concept with electronics distributed across the
+            chassis.
+        </p>
+
+        <p>
+            My work focused on hardware integration, ESP32 and
+            Raspberry Pi communication, sensor integration and
+            environmental data acquisition.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAPABILITIES
+========================================================= -->
+
+<section class="life-section">
+
+    <div class="life-section-label">
+        06 / CAPABILITIES
+    </div>
+
+    <div class="life-capabilities">
+
+        <div>
+            <span>01</span>
+            <h3>AUTONOMOUS<br>NAVIGATION</h3>
+        </div>
+
+        <div>
+            <span>02</span>
+            <h3>HUMAN<br>DETECTION</h3>
+        </div>
+
+        <div>
+            <span>03</span>
+            <h3>OBSTACLE<br>AVOIDANCE</h3>
+        </div>
+
+        <div>
+            <span>04</span>
+            <h3>ENVIRONMENTAL<br>SENSING</h3>
+        </div>
+
+        <div>
+            <span>05</span>
+            <h3>LIVE<br>VIDEO</h3>
+        </div>
+
+        <div>
+            <span>06</span>
+            <h3>MAPPING /<br>REMOTE OPERATION</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MY ROLE
+========================================================= -->
+
+<section class="life-section life-role">
+
+    <div class="life-section-label">
+        07 / MY ROLE
+    </div>
+
+    <div class="life-two-column">
+
+        <h2>
+            HARDWARE
+            <span>INTEGRATION.</span>
+        </h2>
+
+        <div>
+
+            <p>
+                My contribution focused on bringing the individual
+                hardware and software components together into a
+                working robotic system.
+            </p>
+
+            <ul>
+                <li>Hardware integration</li>
+                <li>ESP32 and Raspberry Pi communication</li>
+                <li>Sensor integration</li>
+                <li>Environmental data acquisition</li>
+                <li>System-level testing</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ACHIEVEMENT
+========================================================= -->
+
+<section class="life-result">
+
+    <div class="life-result-label">
+        08 / RECOGNITION
+    </div>
+
+    <h2>
+        1ST PLACE
+        <span>EMBEDDED SYSTEMS & ROBOTICS.</span>
+    </h2>
+
+    <p>
+        LifeLancer was presented at GSSSIETW E-MINDS 2.0,
+        where the project secured first place in the
+        Embedded Systems & Robotics track.
+    </p>
+
+    <div class="life-award-grid">
+
+        <figure>
+
+            <img
+                src="assets/lifelancer-assets/lifelancer-eminds-team-award.png"
+                alt="LifeLancer team receiving E-MINDS 2.0 recognition"
+            >
+
+            <figcaption>
+                E-MINDS 2.0 / TEAM RECOGNITION
+            </figcaption>
+
+        </figure>
+
+        <figure>
+
+            <img
+                src="assets/lifelancer-assets/lifelancer-eminds-certificate.png"
+                alt="E-MINDS 2.0 certificate of achievement"
+            >
+
+            <figcaption>
+                CERTIFICATE OF ACHIEVEMENT
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WINNER DOCUMENT
+========================================================= -->
+
+<section class="life-document">
+
+    <div class="life-document-copy">
+
+        <span>09 / RESULT</span>
+
+        <h2>
+            PROVEN
+            <span>IN COMPETITION.</span>
+        </h2>
+
+        <p>
+            The project was recognised with a first-place result
+            and a ₹10,000 award in the Embedded Systems & Robotics
+            category.
+        </p>
+
+    </div>
+
+    <div class="life-document-image">
+
+        <img
+            src="assets/lifelancer-assets/lifelancer-eminds-winner.png"
+            alt="E-MINDS 2.0 winner certificate"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEXT PROJECT
+========================================================= -->
+
+<section class="life-next">
+
+    <div class="section-label">
+        <span>10</span>
+        CONTINUE EXPLORING
+    </div>
+
+    <a href="projects.html">
+
+        <h2>
+            BACK TO
+            <span>PROJECTS →</span>
+        </h2>
+
+    </a>
+
+</section>
+
+</main>
+
+</body>
+</html>

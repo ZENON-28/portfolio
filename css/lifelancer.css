@@ -1,0 +1,797 @@
+:root {
+    --life-bg: #080808;
+    --life-text: #f2f2f0;
+    --life-muted: #8f8f8a;
+    --life-dim: #555550;
+    --life-line: #242424;
+    --life-accent: #c6ff2e;
+}
+
+body {
+    background: var(--life-bg);
+    color: var(--life-text);
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(var(--life-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--life-line) 1px, transparent 1px);
+
+    background-size: 86px 86px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.life-hero {
+
+    min-height: calc(100vh - 80px);
+
+    padding:
+        120px
+        clamp(40px, 10vw, 170px)
+        120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-bottom: 1px solid var(--life-line);
+}
+
+.life-hero .section-label {
+    margin-bottom: 70px;
+}
+
+.life-hero h1 {
+
+    margin: 0;
+
+    max-width: 1500px;
+
+    font-size:
+        clamp(72px, 10vw, 175px);
+
+    line-height: 0.84;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 800;
+}
+
+.life-hero h1 span {
+
+    display: block;
+
+    color: var(--life-accent);
+}
+
+.life-hero > p {
+
+    max-width: 760px;
+
+    margin-top: 60px;
+
+    color: var(--life-muted);
+
+    font-size:
+        clamp(18px, 1.6vw, 25px);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.life-intro {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+
+    padding:
+        140px
+        clamp(40px, 9vw, 150px);
+
+    border-bottom: 1px solid var(--life-line);
+}
+
+.life-intro h2,
+.life-two-column h2 {
+
+    margin: 0;
+
+    font-size:
+        clamp(55px, 6vw, 105px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.06em;
+}
+
+.life-intro h2 span,
+.life-two-column h2 span,
+.life-story-copy h2 span,
+.life-result h2 span,
+.life-document-copy h2 span {
+
+    display: block;
+
+    color: var(--life-accent);
+}
+
+.life-intro-copy {
+
+    max-width: 650px;
+
+    align-self: end;
+}
+
+.life-intro-copy p,
+.life-two-column p {
+
+    color: var(--life-muted);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.life-section {
+
+    padding:
+        130px
+        clamp(40px, 9vw, 150px);
+
+    border-bottom: 1px solid var(--life-line);
+}
+
+.life-section-label,
+.life-story-label,
+.life-result-label {
+
+    margin-bottom: 60px;
+
+    color: var(--life-accent);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+}
+
+.life-two-column {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+}
+
+.life-two-column p {
+
+    max-width: 650px;
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.life-architecture {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top: 100px;
+
+    border:
+        1px solid
+        var(--life-line);
+}
+
+.life-architecture > div {
+
+    min-height: 270px;
+
+    padding: 35px;
+
+    border-right:
+        1px solid
+        var(--life-line);
+}
+
+.life-architecture > div:last-child {
+
+    border-right: none;
+}
+
+.life-architecture span {
+
+    display: block;
+
+    margin-bottom: 60px;
+
+    color: var(--life-accent);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+}
+
+.life-architecture strong {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+.life-architecture p {
+
+    color: var(--life-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.life-story {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    min-height: 650px;
+
+    border-bottom:
+        1px solid
+        var(--life-line);
+}
+
+.life-story.reverse {
+
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+.life-story.reverse .life-story-image {
+
+    order: 2;
+
+    border-left:
+        1px solid
+        var(--life-line);
+
+    border-right: none;
+}
+
+.life-story.reverse .life-story-copy {
+
+    order: 1;
+}
+
+.life-story-image {
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    border-right:
+        1px solid
+        var(--life-line);
+
+    background: #080808;
+}
+
+.life-story-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.life-story-image:hover img {
+
+    transform: scale(1.02);
+}
+
+.life-story-copy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        clamp(45px, 7vw, 110px);
+}
+
+.life-story-copy h2 {
+
+    margin: 0 0 45px;
+
+    font-size:
+        clamp(48px, 5vw, 82px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.055em;
+}
+
+.life-story-copy p {
+
+    max-width: 520px;
+
+    color: var(--life-muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.life-capabilities {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top:
+        1px solid
+        var(--life-line);
+
+    border-left:
+        1px solid
+        var(--life-line);
+}
+
+.life-capabilities > div {
+
+    min-height: 230px;
+
+    padding: 35px;
+
+    border-right:
+        1px solid
+        var(--life-line);
+
+    border-bottom:
+        1px solid
+        var(--life-line);
+}
+
+.life-capabilities span {
+
+    color: var(--life-accent);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+}
+
+.life-capabilities h3 {
+
+    margin-top: 55px;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.life-role ul {
+
+    padding-left: 20px;
+
+    color: var(--life-muted);
+
+    font-size: 17px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.life-result {
+
+    padding:
+        150px
+        clamp(40px, 9vw, 150px);
+
+    border-bottom:
+        1px solid
+        var(--life-line);
+}
+
+.life-result h2 {
+
+    max-width: 1200px;
+
+    margin: 0 0 45px;
+
+    font-size:
+        clamp(60px, 8vw, 130px);
+
+    line-height: 0.86;
+
+    letter-spacing: -0.065em;
+}
+
+.life-result > p {
+
+    max-width: 700px;
+
+    color: var(--life-muted);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 80px;
+}
+
+.life-award-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.life-award-grid figure {
+
+    margin: 0;
+}
+
+.life-award-grid img {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 1px solid var(--life-line);
+}
+
+.life-award-grid figcaption {
+
+    padding-top: 15px;
+
+    color: var(--life-dim);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   WINNER DOCUMENT
+========================================================= */
+
+.life-document {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    min-height: 700px;
+
+    border-bottom:
+        1px solid
+        var(--life-line);
+}
+
+.life-document-copy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        clamp(45px, 7vw, 110px);
+}
+
+.life-document-copy > span {
+
+    margin-bottom: 45px;
+
+    color: var(--life-accent);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+}
+
+.life-document-copy h2 {
+
+    margin: 0 0 35px;
+
+    font-size:
+        clamp(50px, 5vw, 85px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.055em;
+}
+
+.life-document-copy p {
+
+    max-width: 500px;
+
+    color: var(--life-muted);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+}
+
+.life-document-image {
+
+    overflow: hidden;
+
+    border-left:
+        1px solid
+        var(--life-line);
+
+    background: #101010;
+
+    padding: 50px;
+}
+
+.life-document-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+.life-next {
+
+    padding:
+        130px
+        clamp(40px, 9vw, 150px);
+}
+
+.life-next a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.life-next h2 {
+
+    margin: 0;
+
+    font-size:
+        clamp(60px, 8vw, 135px);
+
+    line-height: 0.86;
+
+    letter-spacing: -0.07em;
+}
+
+.life-next h2 span {
+
+    display: block;
+
+    color: var(--life-accent);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.life-next a:hover h2 span {
+
+    transform: translateX(15px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .life-intro,
+    .life-two-column {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .life-architecture {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .life-architecture > div:nth-child(2) {
+
+        border-right: none;
+    }
+
+    .life-story,
+    .life-story.reverse,
+    .life-document {
+
+        grid-template-columns: 1fr;
+    }
+
+    .life-story.reverse .life-story-image {
+
+        order: 1;
+
+        border-left: none;
+
+        border-bottom:
+            1px solid
+            var(--life-line);
+    }
+
+    .life-story.reverse .life-story-copy {
+
+        order: 2;
+    }
+
+    .life-story-image {
+
+        min-height: 500px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            var(--life-line);
+    }
+
+    .life-capabilities {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .life-document-image {
+
+        min-height: 550px;
+
+        border-left: none;
+
+        border-top:
+            1px solid
+            var(--life-line);
+    }
+
+    .life-award-grid {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .life-hero {
+
+        padding:
+            100px 25px 80px;
+    }
+
+    .life-hero h1 {
+
+        font-size: 17vw;
+    }
+
+    .life-intro,
+    .life-section,
+    .life-result,
+    .life-next {
+
+        padding:
+            80px 25px;
+    }
+
+    .life-architecture,
+    .life-capabilities {
+
+        grid-template-columns: 1fr;
+    }
+
+    .life-architecture > div {
+
+        border-right: none;
+    }
+
+    .life-story-image {
+
+        min-height: 350px;
+    }
+
+    .life-story-copy {
+
+        padding:
+            50px 30px;
+    }
+
+    .life-document-image {
+
+        min-height: 450px;
+
+        padding: 25px;
+    }
+}
